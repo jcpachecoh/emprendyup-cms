@@ -7,8 +7,8 @@
     "build": "strapi build",
     "console": "strapi console",
     "deploy": "strapi deploy",
-    "dev": "strapi develop",
-    "develop": "strapi develop",
+    "dev": "node -r ./polyfills.js ./node_modules/.bin/strapi develop",
+    "develop": "node -r ./polyfills.js ./node_modules/.bin/strapi develop",
     "seed:example": "node ./scripts/seed.js",
     "start": "strapi start",
     "strapi": "strapi",
@@ -25,7 +25,8 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
-    "styled-components": "^6.0.0"
+    "styled-components": "^6.0.0",
+    "web-streams-polyfill": "^4.2.0"
   },
   "devDependencies": {
     "@types/node": "^20",
